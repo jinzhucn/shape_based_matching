@@ -1135,12 +1135,8 @@ void Detector::matchClass(const LinearMemoryPyramid &lm_pyramid,
     for (size_t template_id = 0; template_id < template_pyramids.size(); ++template_id)
     {
         const TemplatePyramid &tp = template_pyramids[template_id];
-
-        
         // First match over the whole image at the lowest pyramid level
         /// @todo Factor this out into separate function
-
-
         const std::vector<LinearMemories> &lowest_lm = lm_pyramid.back();
 
         // Compute similarity maps for each ColorGradient at lowest pyramid level
